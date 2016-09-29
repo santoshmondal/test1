@@ -6,6 +6,7 @@
   <packaging>war</packaging>
   <build>
     <sourceDirectory>src</sourceDirectory>
+    <defaultGoal>install</defaultGoal>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -21,6 +22,8 @@
         <configuration>
           <warSourceDirectory>WebContent</warSourceDirectory>
           <failOnMissingWebXml>false</failOnMissingWebXml>
+          <warName>${artifactId}</warName>
+             <outputDirectory>${project.basedir}/target/</outputDirectory>
         </configuration>
       </plugin>
     </plugins>
